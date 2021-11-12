@@ -6,9 +6,10 @@ pipeline {
         when {
           branch 'main'
           }
-        steps {
-            input message: "Shall we Deploy?"
-         }
+        input {
+                message 'Deploy?'
+                ok 'Do it!'
+                
         post {
             success {
                echo "App started successfully :)"
