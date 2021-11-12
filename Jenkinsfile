@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
            
             steps {
-                echo "Building release ${RELEASE} ..."
+                echo "Building release ${RELEASE} WOW ..."
             }
         }
     }
