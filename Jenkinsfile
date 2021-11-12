@@ -6,9 +6,8 @@ pipeline {
         input {
                 message 'Deploy?'
                 ok 'Do it!'
-                
-            }
-        post {
+               }
+         post {
             success {
                echo "App started successfully :)"
             }
