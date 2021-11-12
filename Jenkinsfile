@@ -3,12 +3,11 @@ pipeline {
 
    stages {
       stage('input statement') {
-        input {
-                message 'Deploy?'
-                ok 'Do it!'
-               }
+        options {
+            timeout(time:1, unit: 'HOURS')
+         }
          steps {
-            echo 'DONE'
+            input message: 'DONE??'
          }
          post {
             success {
