@@ -2,16 +2,12 @@ pipeline {
    agent any
 
    stages {
-      stage('when statement') {
-        when {
-          branch 'main'
-          }
-         step('give input'){
+      stage('input statement') {
         input {
                 message 'Deploy?'
                 ok 'Do it!'
-        }
-         }
+                
+            }
         post {
             success {
                echo "App started successfully :)"
