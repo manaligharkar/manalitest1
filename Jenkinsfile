@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('when statement') {
         when {
-          branch 'master'
+          branch 'main'
           }
         steps {
             input message: "Shall we Deploy?"
