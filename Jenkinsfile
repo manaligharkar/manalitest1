@@ -6,10 +6,12 @@ pipeline {
         when {
           branch 'main'
           }
+         step('give input'){
         input {
                 message 'Deploy?'
                 ok 'Do it!'
         }
+         }
         post {
             success {
                echo "App started successfully :)"
