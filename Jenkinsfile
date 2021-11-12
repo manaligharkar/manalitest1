@@ -1,27 +1,14 @@
 pipeline {
-   agent any
-
-   stages {
-      stage('input statement') {
-        options {
-            timeout(time:1, unit: 'MINUTES')
-         }
-         steps {
-            input message: 'DONE??'
-         }
-         post {
-            success {
-               echo "App started successfully :)"
+    agent any
+    environment {
+        RELEASE='20.04'
+    }
+    stages {
+        stage('Build') {
+           
+            steps {
+                echo "Building release ${RELEASE} ..."
             }
-            aborted {
-               echo "App failed to start :("
-            } 
-            }
-            }
-       stage(' last') {    
-        steps {
-            echo "$GIT_BRANCH"
-         }
-      }
-      }
-      }
+        }
+    }
+}
