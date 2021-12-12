@@ -14,7 +14,7 @@ pipeline {
                echo "App started successfully :)"
             }
             aborted {
-               echo "App failed to start :("
+               echo "App failed to start :( OMG"
             } 
             }
             }
