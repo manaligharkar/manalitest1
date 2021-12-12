@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
            
             steps {
-                echo "Building release ${RELEASE} WOW ${BUILD_URL}..."
+                echo "Building release ${RELEASE} WOW ..."
             }
         }
     }
