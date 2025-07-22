@@ -21,6 +21,7 @@ pipeline {
        stage(' last') {    
         steps {
             echo "$GIT_BRANCH"
+           echo "$GIT_COMMIT"
          }
       }
       }
