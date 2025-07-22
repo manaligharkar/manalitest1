@@ -2,6 +2,12 @@ pipeline {
    agent any
 
    stages {
+      stage(' start-stage') {    
+        steps {
+            echo "$GIT_BRANCH"
+            echo "$GIT_COMMIT"
+        }
+      }
       stage('input statement') {
         options {
             timeout(time:2, unit: 'HOURS')
